@@ -45,7 +45,7 @@ Navigate to **Wireless → WLAN Traffic** in Wireshark. This gives a summary tab
 
 Click the **Deauths** column header to sort by descending deauth count. One network immediately stands out — `Flybox-3C8L` with **72 deauth frames** attributed to it. Every other network in the capture shows 0 deauths.
 
-![alt text](1.jpg)
+![alt text](screenshots/1.jpg)
 
 A sudden flood of deauthentication frames targeting a specific network is the signature of an evil twin attack. This is the targeted network.
 
@@ -57,7 +57,7 @@ A sudden flood of deauthentication frames targeting a specific network is the si
 
 Still in the WLAN Statistics table, look at the two entries for `Flybox-3C8L`. Two different BSSIDs are broadcasting the same SSID — this is the core indicator of an evil twin attack.
 
-![alt text](2.jpg)
+![alt text](screenshots/2.jpg)
 
 The BSSID with **72 deauths** attributed to it is the legitimate AP. The attacker spoofed this MAC address as the source of all deauth frames, making them appear to come from the real router.
 
@@ -92,11 +92,11 @@ wlan.fc.type_subtype == 12 && wlan.ta == 50:c7:bf:39:0c:8c
 - `wlan.fc.type_subtype == 12` filters for deauthentication frames
 - `wlan.ta == 50:c7:bf:39:0c:8c` filters by transmitter address — the spoofed legitimate AP MAC
 
-![alt text](3.jpg)
+![alt text](screenshots/3.jpg)
 
 Click any of the resulting frames and read the **Destination** field. Every targeted deauth frame was addressed to the same MAC, that is the victim.
 
-![alt text](4.jpg)
+![alt text](screenshots/4.jpg)
 
 > **Answer: `F4:7B:5E:34:2C:D8`**
 
@@ -112,7 +112,7 @@ wlan.fc.type_subtype == 12 && wlan.da == f4:7b:5e:34:2c:d8
 
 This filters deauth frames specifically addressed to the victim's MAC, excluding the 8 broadcast deauths (`ff:ff:ff:ff:ff:ff`) the attacker also sent. Read the packet count in the bottom right of Wireshark.
 
-![alt text](5.jpg)
+![alt text](screenshots/5.jpg)
 
 > **Answer: `64`**
 
@@ -122,7 +122,7 @@ This filters deauth frames specifically addressed to the victim's MAC, excluding
 
 With the same filter applied, click any deauth frame and expand **IEEE 802.11 Wireless Management* --> **Fixed Parameters** in the packet details. The **Reason Code** field is visible directly.
 
-![alt text](6.jpg)
+![alt text](screenshots/6.jpg)
 
 Reason code `7` means *"Class 3 frame received from nonassociated station"* : the most common reason code used in deauth attacks. It tells the victim's device that it is sending data frames while not properly associated, prompting it to disconnect and reconnect.
 
@@ -138,7 +138,7 @@ We know the victim is going to reconnect to the Fake AP so the best filter to ap
 wlan.addr == 00:c0:ca:7d:72:47
 ```
 
-![alt text](7.jpg)
+![alt text](screenshots/7.jpg)
 
 After the association frames, four frames appear labeled **EAPOL** in the Protocol column. EAPOL — Extensible Authentication Protocol Over LAN — is the protocol responsible for carrying the WPA2 4-way handshake messages between the client and the access point. It operates on top of 802.11 and handles all authentication and key exchange during the connection process.
 
@@ -170,7 +170,7 @@ password + SSID → PBKDF2 → PMK → PTK → KCK → HMAC-SHA1 → MIC
 
 When the computed MIC matches the captured MIC, the password is found.
 
-![alt text](8.jpg)
+![alt text](screenshots/8.jpg)
 
 > **Answer: `ricardo`**
 
