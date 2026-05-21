@@ -1,0 +1,61 @@
+May 10 2026 00:00:01 ott-device-01 systemd[1]: Starting Daily apt download activities...
+May 10 2026 00:00:02 ott-device-01 systemd[1]: Started Daily apt download activities.
+May 10 2026 00:01:17 ott-device-01 kernel: [ 3600.112] usb 1-1: USB disconnect, device number 2
+May 10 2026 00:05:33 ott-device-01 CRON[892]: pam_unix(cron:session): session opened for user root by (uid=0)
+May 10 2026 00:05:33 ott-device-01 CRON[892]: pam_unix(cron:session): session closed for user root
+May 10 2026 00:11:04 ott-device-01 ntpd[423]: synchronized to 216.239.35.0, stratum 1
+May 10 2026 00:17:45 ott-device-01 sshd[1021]: Failed password for root from 45.33.32.156 port 41822 ssh2
+May 10 2026 00:17:48 ott-device-01 sshd[1021]: Failed password for root from 45.33.32.156 port 41822 ssh2
+May 10 2026 00:17:51 ott-device-01 sshd[1021]: Failed password for root from 45.33.32.156 port 41822 ssh2
+May 10 2026 00:17:54 ott-device-01 sshd[1021]: Connection closed by 45.33.32.156 port 41822 [preauth]
+May 10 2026 00:23:11 ott-device-01 sshd[1021]: Invalid user admin from 198.51.100.22 port 55301
+May 10 2026 00:23:12 ott-device-01 sshd[1021]: Failed password for invalid user admin from 198.51.100.22 port 55301 ssh2
+May 10 2026 00:23:14 ott-device-01 sshd[1021]: Connection closed by 198.51.100.22 port 55301 [preauth]
+May 10 2026 00:30:01 ott-device-01 CRON[901]: pam_unix(cron:session): session opened for user root by (uid=0)
+May 10 2026 00:30:01 ott-device-01 CRON[901]: pam_unix(cron:session): session closed for user root
+May 10 2026 00:44:09 ott-device-01 sshd[1021]: Invalid user pi from 203.0.113.77 port 60012
+May 10 2026 00:44:10 ott-device-01 sshd[1021]: Failed password for invalid user pi from 203.0.113.77 port 60012 ssh2
+May 10 2026 00:44:12 ott-device-01 sshd[1021]: Connection closed by 203.0.113.77 port 60012 [preauth]
+May 10 2026 00:51:37 ott-device-01 kernel: [ 6234.887] EXT4-fs (mmcblk0p2): re-mounted. Opts: errors=remount-ro
+May 10 2026 01:00:01 ott-device-01 CRON[914]: pam_unix(cron:session): session opened for user root by (uid=0)
+May 10 2026 01:00:01 ott-device-01 CRON[914]: pam_unix(cron:session): session closed for user root
+May 10 2026 01:09:22 ott-device-01 sshd[1021]: Failed password for root from 91.108.4.11 port 52701 ssh2
+May 10 2026 01:09:25 ott-device-01 sshd[1021]: Failed password for root from 91.108.4.11 port 52701 ssh2
+May 10 2026 01:09:28 ott-device-01 sshd[1021]: Failed password for root from 91.108.4.11 port 52701 ssh2
+May 10 2026 01:09:31 ott-device-01 sshd[1021]: Connection closed by 91.108.4.11 port 52701 [preauth]
+May 10 2026 01:15:44 ott-device-01 sshd[1021]: Invalid user ubuntu from 185.220.101.45 port 49371
+May 10 2026 01:15:45 ott-device-01 sshd[1021]: Failed password for invalid user ubuntu from 185.220.101.45 port 49371 ssh2
+May 10 2026 01:22:19 ott-device-01 ntpd[423]: synchronized to 216.239.35.4, stratum 1
+May 10 2026 01:30:01 ott-device-01 CRON[933]: pam_unix(cron:session): session opened for user root by (uid=0)
+May 10 2026 01:30:01 ott-device-01 CRON[933]: pam_unix(cron:session): session closed for user root
+May 10 2026 01:44:12 ott-device-01 sshd[1021]: Failed password for guest from 198.51.100.22 port 52167 ssh2
+May 10 2026 01:44:15 ott-device-01 sshd[1021]: Invalid user guest from 203.0.113.77 port 55268
+May 10 2026 01:44:18 ott-device-01 sshd[1021]: Connection closed by 203.0.113.77 port 61686 [preauth]
+May 10 2026 01:52:03 ott-device-01 sshd[1021]: Failed password for root from 203.0.113.77 port 63769 ssh2
+May 10 2026 01:52:07 ott-device-01 sshd[1021]: Failed password for root from 91.108.4.11 port 61904 ssh2
+May 10 2026 01:52:10 ott-device-01 sshd[1021]: Connection closed by 91.108.4.11 port 61904 [preauth]
+May 10 2026 01:58:34 ott-device-01 kernel: [ 9211.443] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 10 2026 02:00:01 ott-device-01 CRON[951]: pam_unix(cron:session): session opened for user root by (uid=0)
+May 10 2026 02:00:01 ott-device-01 CRON[951]: pam_unix(cron:session): session closed for user root
+May 10 2026 02:01:44 ott-device-01 sshd[1021]: Failed password for test from 198.51.100.22 port 51244 ssh2
+May 10 2026 02:03:11 ott-device-01 sshd[1021]: Invalid user deploy from 203.0.113.77 port 64819
+May 10 2026 02:03:13 ott-device-01 sshd[1021]: Connection closed by 203.0.113.77 port 64819 [preauth]
+May 10 2026 02:09:55 ott-device-01 sshd[1021]: pam_unix(sshd:auth): authentication failure; user=root logname= uid=0 euid=0 tty=ssh ruser= rhost=45.33.32.156
+May 10 2026 02:11:30 ott-device-01 sshd[1021]: Failed password for root from 45.33.32.156 port 63754 ssh2
+May 10 2026 02:11:33 ott-device-01 sshd[1021]: Failed password for root from 45.33.32.156 port 63754 ssh2
+May 10 2026 02:11:36 ott-device-01 sshd[1021]: Connection closed by 45.33.32.156 port 63754 [preauth]
+May 10 2026 02:14:02 ott-device-01 sshd[1021]: Invalid user user from 185.220.101.45 port 44001
+May 10 2026 02:14:03 ott-device-01 sshd[1021]: Failed password for invalid user user from 185.220.101.45 port 44001 ssh2
+May 10 2026 02:14:05 ott-device-01 sshd[1021]: Connection closed by 185.220.101.45 port 44001 [preauth]
+May 10 2026 02:17:41 ott-device-01 telnetd[1337]: connect from 82.115.47.23
+May 10 2026 02:17:41 ott-device-01 login[1338]: ROOT LOGIN on '/dev/pts/0' FROM '82.115.47.23'
+May 10 2026 02:17:41 ott-device-01 pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+May 10 2026 02:30:01 ott-device-01 CRON[974]: pam_unix(cron:session): session opened for user root by (uid=0)
+May 10 2026 02:30:01 ott-device-01 CRON[974]: pam_unix(cron:session): session closed for user root
+May 10 2026 02:31:05 ott-device-01 sshd[1021]: Failed password for admin from 45.33.32.156 port 51200 ssh2
+May 10 2026 02:38:44 ott-device-01 kernel: [12901.334] usb 1-1: USB disconnect, device number 3
+May 10 2026 02:44:17 ott-device-01 sshd[1021]: Invalid user deploy from 198.51.100.22 port 60001
+May 10 2026 02:44:19 ott-device-01 sshd[1021]: Connection closed by 198.51.100.22 port 60001 [preauth]
+May 10 2026 02:51:03 ott-device-01 ntpd[423]: synchronized to 216.239.35.0, stratum 1
+May 10 2026 03:00:01 ott-device-01 CRON[991]: pam_unix(cron:session): session opened for user root by (uid=0)
+May 10 2026 03:00:01 ott-device-01 CRON[991]: pam_unix(cron:session): session closed for user root
