@@ -1,4 +1,4 @@
-#Cyberspark CTF - Forensics Challenges Write-ups 🌙
+# Cyberspark CTF - Forensics Challenges Write-ups 
 
 ## Forensics Challenges
 - SessionJack (Easy)
